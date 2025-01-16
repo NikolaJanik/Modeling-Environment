@@ -4,7 +4,7 @@
  *
  */
 
-package JanNik;
+package jannik;
 
 import java.io.*;
 import groovy.lang.Binding;
@@ -26,7 +26,7 @@ public class Controller {
 
 	public Controller(String modelName) {
 		try {
-			this.modelClass = Class.forName("zad1.models." + modelName);
+			this.modelClass = Class.forName("jannik.models." + modelName);
 			this.modelInstance = this.modelClass.getDeclaredConstructor().newInstance();
 		} catch(Exception e) {
 			throw new RuntimeException("Error initializing model: " + e.getMessage());
