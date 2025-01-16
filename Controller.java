@@ -1,4 +1,10 @@
-package zad1;
+/**
+ *
+ *  @author Janik Nikola
+ *
+ */
+
+package JanNik;
 
 import java.io.*;
 import groovy.lang.Binding;
