@@ -1,4 +1,10 @@
-package zad1.models;
+/**
+ *
+ *  @author Janik Nikola
+ *
+ */
+
+package jannik.models;
 
 import java.lang.annotation.*;
 
