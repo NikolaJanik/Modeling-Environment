@@ -4,7 +4,7 @@
  *
  */
 
-package JanNik;
+package jannik;
 
 
 public class Main {
