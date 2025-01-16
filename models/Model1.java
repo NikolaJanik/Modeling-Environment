@@ -1,10 +1,10 @@
 /**
  *
- *  @author Janik Nikola S31980
+ *  @author Janik Nikola
  *
  */
 
-package zad1.models;
+package jannik.models;
 
 
 public class Model1 {
