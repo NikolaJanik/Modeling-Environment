@@ -42,3 +42,8 @@ Na podstawie tego wiersza definiowana jest wartość specjalnej zmiennej LL (lic
 
 Wartości dla zmiennych może być od 1 do LL.
 Jesli jest ich mniej niż LL, to pozostałe są ustalane na ostatnią z podanych wartości.
+
+
+**3. Opis plików:**
+
+W folderze Modeling znajduje się plik typu .txt, w którym znajdują się dane oraz plik .groovy, zawierajacy treść sktyptu.
