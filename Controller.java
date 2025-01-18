@@ -87,24 +87,26 @@ public class Controller {
 		}
 	}
 	
-	@SuppressWarnings("unchecked")
-	public Controller runScript(String script) {
-		System.out.println("Ruszył skrypt");
-		try {
-			Binding binding = new Binding(variables);
-			GroovyShell shell = new GroovyShell(binding);
-			shell.evaluate(script);
-			
-			for(Map.Entry<String, Object> entry : ((Map<String, Object>) binding.getVariables()).entrySet()) {
-				if(!entry.getKey().matches("[a-z]")) {
-					variables.put(entry.getKey(), entry.getValue());
-				}
-			}
-		} catch (Exception e) {
-			throw new RuntimeException("Error running script: " + e.getMessage());
-		}
+
+	public void runScriptFromFile(String filePath) {
+		ScriptEngineManager manager = new ScriptEngineManager();
+   	 	ScriptEngine engine = manager.getEngineByName("groovy");
+
+   		 if (engine == null) {
+			 throw new RuntimeException("Groovy ScriptEngine is not available. Make sure the Groovy library is included.");
+    		}
 		
-		return this;
+   		for (Map.Entry<String, Object> entry : binding.getVariables().entrySet()) {
+       		engine.put(entry.getKey(), entry.getValue());
+    		}
+
+    		try (FileReader reader = new FileReader(filePath)) {
+       		engine.eval(reader);
+    		} catch (IOException e) {
+       		 	throw new RuntimeException("Error reading script file: " + filePath, e);
+   		} catch (ScriptException e) {
+        		throw new RuntimeException("Error running script: " + e.getMessage(), e);
+    		}
 	}
 	
 	
