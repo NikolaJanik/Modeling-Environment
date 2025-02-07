@@ -1,6 +1,6 @@
 # Modeling-Environment
 
-Program został napisany w ramach realizacji przedmiotu "Uniwersalne Techniki Programowania"
+Program został zrealizowany w ramach zadania z kursu programowania: 
 
 **1. Założenia ogólne**
 
